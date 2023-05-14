@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
-@ServletComponentScan // 서블릿 자동 등록(위의 패키지 하위가 대상
+@ServletComponentScan // 서블릿 자동 등록(위의 패키지 하위가 대상)
 @SpringBootApplication
 public class ServletApplication {
 
