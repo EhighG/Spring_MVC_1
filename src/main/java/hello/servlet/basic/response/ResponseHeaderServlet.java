@@ -41,7 +41,7 @@ public class ResponseHeaderServlet extends HttpServlet {
 //        response.setHeader("Content-Type", "text/plain;charset=utf-8");
         response.setContentType("text/plain");
         response.setCharacterEncoding("utf-8");
-//        response.setContentLength(35); // 생략 시 자동 생성 / 한글 하나에 3(바이트?)
+        response.setContentLength(35); // 생략 시 자동 생성 / 한글 하나에 3(바이트)
         // length 잘못 입력했을 때: 헤더는 해당 값이 되며, 작게 입력하면 브라우저가 그만큼만 읽고, 크게 입력하면, (응답이 다 안 온줄 알고?) timeout까지 기다린다!
 
     }
