@@ -8,7 +8,8 @@
   <title>Title</title>
 </head>
 <body>
-<!-- 상대경로 사용, [현재 URL이 속한 계층 경로 + /save] -->
+<!-- 상대경로 사용, [현재 URL이 속한 계층 경로 + /save] -> 각 구조에 맞는 컴포넌트끼리 연동되기 위함(~controller/v1/new-form -> ~controller/v1/save
+ 실제 개발 시, 상대경로가 쓰이는 경우는 많지 않다. -->
 <form action="save" method="post">
   username: <input type="text" name="username" />
   age: <input type="text" name="age" />
