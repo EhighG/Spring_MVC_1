@@ -1,9 +1,9 @@
 package hello.servlet.web.frontcontrollerpattern.v2;
 
-import hello.servlet.web.frontcontrollerpattern.MyView;
-import hello.servlet.web.frontcontrollerpattern.v2.implementations.MemberFormControllerV2;
-import hello.servlet.web.frontcontrollerpattern.v2.implementations.MemberListControllerV2;
-import hello.servlet.web.frontcontrollerpattern.v2.implementations.MemberSaveControllerV2;
+import hello.servlet.web.frontcontrollerpattern.MyViewV2;
+import hello.servlet.web.frontcontrollerpattern.v2.implementation.MemberFormControllerV2;
+import hello.servlet.web.frontcontrollerpattern.v2.implementation.MemberListControllerV2;
+import hello.servlet.web.frontcontrollerpattern.v2.implementation.MemberSaveControllerV2;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,7 +39,7 @@ public class FrontControllerServletV2 extends HttpServlet {
             return;
         }
 
-        MyView view = controller.process(request, response);
+        MyViewV2 view = controller.process(request, response);
         // +) ctrl + alt + b(or 클릭) = 구현 클래스로 이동, ctrl + shift + b(or 클릭) = 반환 클래스로 이동
         view.render(request, response);
     }
