@@ -13,7 +13,7 @@
 <%--  <li>age=<%=((Member)request.getAttribute("member")).getAge()%></li>--%>
   <%-- 방식 2 - jsp가 제공하는 포맷--%>
   <li>id=${member.id}</li> <%-- 프로퍼티 접근법 - 후에 getter(member.getId())로 변환 --%>
-  <li>uesrname=${member.username}</li>
+  <li>username=${member.username}</li>
   <li>age=${member.age}</li>
 </ul>
 </body>
