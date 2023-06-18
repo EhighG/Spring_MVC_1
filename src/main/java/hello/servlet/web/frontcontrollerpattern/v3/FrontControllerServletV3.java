@@ -41,7 +41,7 @@ public class FrontControllerServletV3 extends HttpServlet {
             return;
         }
 
-        // 매개변수를 req, res -> paramMap으로 바꿈으로서, 컨트롤러들의 서블릿 종속성 제거
+        // 컨트롤러들의 서블릿 종속성 제거 (req, res -> paramMap)
         Map<String, String> paramMap = createParamMap(request); // level을 맞춰주기 위해서?? 위와 작업단위의 크기를 맞춰준다. 디테일한 코드는 메소드로 추출해서 적당히 크게.
 
         // 논리이름 -> 물리적 주소로 변환
@@ -53,11 +53,11 @@ public class FrontControllerServletV3 extends HttpServlet {
 
     }
 
-    private static MyViewV3 viewResolver(String viewName) {
+    private MyViewV3 viewResolver(String viewName) {
         return new MyViewV3("/WEB-INF/views/" + viewName + ".jsp"); // 논리 이름은 앞의 '/'도 포함하지 않으므로, 여기서 추가해줘야 함.
     }
 
-    private static Map<String, String> createParamMap(HttpServletRequest request) {
+    private Map<String, String> createParamMap(HttpServletRequest request) {
         // requestParams 다 꺼내서 담기
         Map<String, String> paramMap = new HashMap<>();
         request.getParameterNames().asIterator()
