@@ -25,7 +25,6 @@ public class FrontControllerServletV1 extends HttpServlet {
         controllerMap.put(basePath + "/new-form", new MemberFormControllerV1());
         controllerMap.put(basePath + "/save", new MemberSaveControllerV1());
         controllerMap.put(basePath, new MemberListControllerV1());
-
     }
 
     @Override
